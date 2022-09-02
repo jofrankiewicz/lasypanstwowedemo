@@ -16500,6 +16500,7 @@ AUI().use('aui-base', 'liferay-form', 'liferay-menu', 'liferay-notice', 'liferay
       background-color: #204E28;
       color: #ffffff;
     }
+
   </style>
 </head>
 <body>
@@ -16591,6 +16592,11 @@ AUI().use('aui-base', 'liferay-form', 'liferay-menu', 'liferay-notice', 'liferay
     function onLoad(instance) {
       // Save this instance so we can use it in our handlers.
       webChatInstance = instance;
+
+      const customLanguagePack = {
+        "input_placeholder": "Napisz coś..."
+      };
+      instance.updateLanguagePack(customLanguagePack);
 
       // Listen for the customResponse event that will allow us to create content for the custom response when one is
       // received. See https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#summary for more
